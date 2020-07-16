@@ -79,7 +79,7 @@ colnames(sensitivity.info)[1:2] <- c("drugid","cellid")
 sensitivity.info$nbr.conc.tested <- 9
 sensitivity.info$min.Dose.uM <- apply(raw.sensitivity[,,"Dose"], 1, min)
 sensitivity.info$max.Dose.uM <- apply(raw.sensitivity[,,"Dose"], 1, max)
-
+rownames(sensitivity.info) <- rownames(raw.sensitivity)
 save(raw.sensitivity, sensitivity.info, file="/pfs/out/drug_norm_post.RData")
 
 ##create sensitivity slices
