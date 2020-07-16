@@ -1,5 +1,6 @@
 require(data.table) || install.packages("data.table")
 require(matrixStats) || install.packages("matrixStats")
+install.packages("abind")
 library(abind)
 
 concentrations.no <- 9
