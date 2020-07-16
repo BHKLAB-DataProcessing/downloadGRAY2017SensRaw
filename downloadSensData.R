@@ -6,8 +6,8 @@ library(abind)
 concentrations.no <- 9
 
 options(stringsAsFactors=FALSE)
-gray.raw.drug.sensitivity <- fread(file="./Gray_data_raw_dose_response.csv")
-gray.conc <- fread("./Gray_drug_conc.csv")
+gray.raw.drug.sensitivity <- fread(file="/pfs/downloadGRAY2017SensRaw/Gray_data_raw_dose_response.csv")
+gray.conc <- fread("/pfs/downloadGRAY2017SensRaw/Gray_drug_conc.csv")
 
 gray.raw.drug.sensitivity[,
       background := rowMedians(data.matrix(gray.raw.drug.sensitivity[,grep("^background_od", 
