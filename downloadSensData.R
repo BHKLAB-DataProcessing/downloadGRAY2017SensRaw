@@ -75,7 +75,7 @@ colnames(raw.sensitivity) <- paste0("dose", seq_len(concentrations.no))
 dimnames(raw.sensitivity)[[3]] <- c("Dose", "Viability")
 
 sensitivity.info <- as.data.frame(gray.raw.drug.sensitivity[,.(drug, cellline, drug_plate_id, T0_plate_id, T0_median_od, T0_background_od1, T0_background_od2, units)])
-colnames(sensitivity.info)[1:2] <- c("cellid", "drugid")
+colnames(sensitivity.info)[1:2] <- c("drugid","cellid")
 sensitivity.info$nbr.conc.tested <- 9
 sensitivity.info$min.Dose.uM <- apply(raw.sensitivity[,,"Dose"], 1, min)
 sensitivity.info$max.Dose.uM <- apply(raw.sensitivity[,,"Dose"], 1, max)
