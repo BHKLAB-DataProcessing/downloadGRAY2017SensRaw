@@ -1,5 +1,5 @@
-require(data.table) || install.packages("data.table")
-require(matrixStats) || install.packages("matrixStats")
+require(data.table) || install.packages("data.table") #new
+require(matrixStats) || install.packages("matrixStats") #new
 
 library(abind)
 
